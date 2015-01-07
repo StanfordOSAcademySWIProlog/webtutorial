@@ -60,13 +60,13 @@ restart_handler(Request) :-
 */
 workshop_page(_Request) :-
 	reply_html_page(
-	    title('Strangeloop 2013'),
+	    title('OS Academy Spring 2015'),
 	    [
 		\html_requires('/help/source/res/pldoc.css'),
 		\html_requires('/help/source/res/pldoc.js'),
 		\html_requires('/f/workshop.css'),
 		h1('Strangeloop 2013'),
-		h2('Real Development Boot Camp in '),
+		h2('Web Development in '),
 		h2(\img_fix([src('/f/swipl.png')], [])),
 		\sections,
 		hr([]),
@@ -431,21 +431,14 @@ priority(intro, 100).
 subsection(intro, 'Look at code for a server').
 subsection(intro, 'Play while I jabber at you').
 subsection(intro, 'Feel free to interrupt, that\'s the point').
-subsection(intro, 'Getting to the end on time is minor').
 subsection(intro, 'workshop page').
-
-section_head(troubleshoot,
-	     'Get everybody running',
-	     'debug.pl').
-%%	timing(-Name:atom, -Minutes:number) is det
-timing(troubleshoot, 15).
-%%	priority(-Name:atom, -Score:number) is det
-priority(troubleshoot, 100).
 
 section_head(starting_the_server,
 	     'The Multithreaded Server',
 	     'debug.pl').
+%%	timing(-Name:atom, -Minutes:number) is det
 timing(starting_the_server, 10).
+%%	priority(-Name:atom, -Score:number) is det
 priority(starting_the_server, 50).
 
 %%	subsection(-Name:atom, -Desc:atom) is det

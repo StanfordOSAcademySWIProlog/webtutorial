@@ -1,4 +1,4 @@
-:- module(debug, []).
+:- module(debug_start, []).
 /** <module> Dev mode starter file
 
     Consult this file to start the system in dev mode
@@ -94,7 +94,7 @@ http:location(pldoc, root('help/source'), [priority(10)]).
 
 
 % and bring up a module in the editor
-:- edit('debug.pl').
+:- edit('debug_start.pl').
 
 % open the navigator and the cross referencer
 % put it in module user so programmer doesn't have to
