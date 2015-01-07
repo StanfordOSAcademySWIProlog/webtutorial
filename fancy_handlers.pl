@@ -69,6 +69,8 @@ serve_files(Request) :-
 serve_files(Request) :-
       http_404([], Request).
 
+% The above is handled more elegantly by serve_files_in_directory/2
+
 /*
       Challenge - how would you make a 'site offline' function?
 

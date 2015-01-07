@@ -96,9 +96,7 @@ http:location(pldoc, root('help/source'), [priority(10)]).
 % and bring up a module in the editor
 :- edit('debug_start.pl').
 
-% open the navigator and the cross referencer
+% open the navigator
 % put it in module user so programmer doesn't have to
 % use a module name
-user:open_tools :- prolog_ide(open_navigator),
-              prolog_ide(xref).
-
+user:open_tools :- prolog_ide(open_navigator).

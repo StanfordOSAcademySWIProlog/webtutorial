@@ -48,6 +48,7 @@ user:file_search_path(js, assets).
 %	  Rover, or Links  (default clippy)
 %
 %       * id(ID) ID is the ID of the agent (default agent1236742)
+%	  not used
 %
 %	this just brings the character up. You have to control them
 %	yourself.
@@ -55,7 +56,7 @@ user:file_search_path(js, assets).
 clippy(Generator) -->
 	{
              (	  call(Generator, character(Char)) ; Char = 'Clippy' ),
-	     (	  call(Generator, id(ID)) ; ID = agent),
+%	     (	  call(Generator, id(ID)) ; ID = agent1236742),
 	     member(Char , ['Clippy', 'Merlin', 'Rover', 'Links'])
         },
 	html([

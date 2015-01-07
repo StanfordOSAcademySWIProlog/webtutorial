@@ -24,8 +24,8 @@
 %
 page_demo(_Request) :-
 	reply_html_page(
-	    title('Strangeloop Rocks!'),
-	    div([h1('Strangeloop Rocks'),
+	    title('OS Academy Rocks!'),
+	    div([h1('OS Academy Rocks'),
 		 p('This page was generated from termerized html')
 		])).
 

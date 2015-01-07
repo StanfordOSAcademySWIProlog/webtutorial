@@ -173,7 +173,7 @@ section(StartsAt, [Name | T], WeWillCover, CurrentFound) -->
 	{
 	   section_head(Name, Label, File),
 	   timing(Name, Timing),
-           atomic_list_concat(['HTTPrequest(\'/help/source/edit?file=', File, '\')'], AFile),
+           atomic_list_concat(['HTTPrequest(\'/help/source/edit?file=', File, '\'); return false;'], AFile),
            (   bagof(Desc, subsection(Name, Desc), Subsections) ->
                true;
                Subsections = []
@@ -435,7 +435,7 @@ subsection(intro, 'workshop page').
 
 section_head(starting_the_server,
 	     'The Multithreaded Server',
-	     'debug.pl').
+	     'debug_start.pl').
 %%	timing(-Name:atom, -Minutes:number) is det
 timing(starting_the_server, 10).
 %%	priority(-Name:atom, -Score:number) is det
@@ -459,7 +459,7 @@ priority(pldoc_intro, 10).
 
 section_head(environment_setup,
 	     'Making A Comfy Environment',
-	     'debug.pl').
+	     'debug_start.pl').
 timing(environment_setup, 10).
 priority(environment_setup, 25).
 subsection(environment_setup, portray_text).
@@ -520,7 +520,7 @@ priority(break2, 100).
 section_head(html_qq,
 	     'HTML Quasiquotes',
 	     'html_handlers.pl').
-timing(html_qq, 10).
+timing(html_qq, 4).
 priority(html_qq, 15).
 
 section_head(mailman,
@@ -564,6 +564,8 @@ section_head(javascript,
 	     'clippy_demo.pl').
 timing(javascript, 5).
 priority(javascript, 5).
+subsection(javascript, 'Quasiquotes').
+subsection(javascript, 'Pengines - watch the video').
 
 section_head(conclusion,
 	     'Conclusion',
